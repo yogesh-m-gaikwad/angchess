@@ -1,0 +1,22 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Angular
+/dist/
+/tmp/
+/out-tsc/
+/.angular/cache
+.angular/
+
+# Env
+.env
+.env.*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
