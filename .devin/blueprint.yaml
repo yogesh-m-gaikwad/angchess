@@ -1,0 +1,26 @@
+# https://docs.devin.ai/onboard-devin/environment-yaml
+# Angular + TypeScript chess app (study/learning project).
+initialize: |
+  source ~/.nvm/nvm.sh
+  nvm install 22.12.0
+  nvm alias default 22.12.0
+  nvm use 22.12.0
+  npm install -g @angular/cli
+maintenance: |
+  source ~/.nvm/nvm.sh && nvm use default
+  [ -f package.json ] && npm install || echo "No package.json yet; skipping npm install"
+knowledge:
+  - name: best-practices
+    contents: |
+      Follow .devin/best-practices.md: standalone components, signals for state,
+      native control flow (@if/@for/@switch), input()/output() functions,
+      inject() over constructor injection, no any, WCAG AA + AXE.
+  - name: lint
+    contents: |
+      npm run lint   # or: ng lint
+  - name: test
+    contents: |
+      npm test       # or: ng test --watch=false
+  - name: build
+    contents: |
+      npm run build  # or: ng build
